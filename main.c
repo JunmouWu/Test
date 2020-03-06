@@ -4,6 +4,7 @@
 #include "treeStructure.h"
 #include "buildTree.h"
 #include "writeTree.h"
+#include "destroyTree.h"
 
 // main
 
@@ -21,9 +22,12 @@ int main( int argc, char **argv ) {
   
   //grow a tree
   growTree( head ); 
+  
+  destroyTree( head );
 
   // print the tree for Gnuplot
-	writeTree( head );
+  writeTree( head );
+  	
 
   return 0;
 }
